@@ -1,0 +1,294 @@
+.nav{
+    border: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color:  #3AAFA9;
+    border-radius: 20px;
+
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+    font-size: 16;
+}
+
+.nav ul li{
+    padding: 8px 25px;
+    transition: 0s;
+}
+
+.nav ul li:hover{
+    background-color: white;
+    color:  #3AAFA9;
+    box-shadow: 0 0 10px white;
+}
+
+.pardiv{
+    
+    justify-content: space-evenly;
+    
+}
+.card{
+    margin: 0 auto;    /* for move to center */
+    height: 200px;
+    width: 500px;
+    border: 1px solid grey;
+    text-align: center;
+    box-shadow: 10px 10px 15px grey;
+    border-radius: 20px;
+   /* background: url('My\ pic.JPG');*/
+}
+
+.logocard:hover{
+    border: 1px solid  #3AAFA9;
+    box-shadow: 10px 10px 15px   black;
+    transition: 0s;
+}
+
+.aboutme{
+    color: blue;
+    align-items: center;
+}
+
+.heading{
+    height: 100px;
+    border: 1px solid darkolivegreen;
+    background-color: black;
+    border-radius: 20px;
+    color: gold;
+    
+}
+
+a{
+    color: gold;
+    text-decoration: none;
+}
+img{
+    border-radius: 20px;
+}
+
+.achievementcard{
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+   
+}
+
+.mySlides{
+    height: 300px;
+    width: 300px;
+    object-fit: contain;
+    
+}
+
+.Certificatescard{
+    height: 500px;
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.myCertificates{
+    height: 500px;
+    width: 500px;
+    object-fit: contain;
+}
+
+.box{
+    border-radius: 100%;
+    background-color: white;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    float: left;
+    display: flex;
+    gap: 20px;
+}
+
+.row{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 50px 1rem;
+}
+
+.boxhead{
+    border-top-right-radius: 100%;
+    background-color: gray;
+    height: 200px;
+    width: 200px;
+    float: left;
+    display: block;
+    
+}
+
+.row:after{
+    display: inline-block;
+    gap: 20px;
+}
+
+.background{
+    background-color: gold;
+    border-radius: 25px;
+}
+
+.logocard{
+    margin: 0 auto;    /* for move to center */
+    height: 300px;
+    width: 300px;
+    border: 1px solid grey;
+    text-align: center;
+    box-shadow: 10px 10px 15px grey;
+    border-radius: 20px;
+}
+/*
+.footer{
+    z-index: 1;
+    display: grid;
+    position: relative;
+    grid-area: footer;
+    min-height: 12rem;
+    background: #ED5565;
+}
+
+.bubbles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: red;
+    filter: url("#blob");
+
+}
+
+.bubble{
+    position: absolute;
+    left: 500px 50%;
+    background: red;
+    border-radius: 100%;
+    animation: 5px;
+    animation-timeline: 4s;
+    
+}
+
+#bongo-cat{
+    fill: black;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 4;
+}
+
+.paw, .head{
+    stroke: orange;
+}
+
+.laptop-keyboard{
+    stroke-width: 2;
+}
+
+.laptop-base,
+.laptop-cover,
+.paw .pads{
+    stroke: palevioletred;
+}
+*/
+footer {
+    display:grid;
+    grid-template-rows: 1fr 10rem auto;
+    grid-template-areas:"main" "." "footer";
+    overflow-x:hidden;
+    background:#F5F7FA;
+    min-height:100vh;
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+    .footer {
+        z-index: 1;
+        --footer-background:  gold/*#ED5565*/;
+        display:grid;
+        position: relative;
+        grid-area: footer;
+        min-height:12rem;
+        .bubbles {
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            height:1rem;
+            background:var(--footer-background);
+            filter:url("#blob");
+            .bubble {
+                position: absolute;
+                left:var(--position, 50%);
+                background:var(--footer-background);
+                border-radius:100%;
+                animation:bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
+                    bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+                transform:translate(-50%, 100%);
+            }
+        }
+        .content {
+            z-index: 2;
+            display:grid;
+            grid-template-columns: 1fr auto;
+            grid-gap: 4rem;
+            padding:2rem;
+            background:var(--footer-background);
+            a, p {
+                color:#F5F7FA;
+                text-decoration:none;
+            }
+            b {
+                color:white;
+            }
+            p {
+                margin:0;
+                font-size:.75rem;
+            }
+            >div {
+                display:flex;
+                flex-direction:column;
+                justify-content: center;
+                >div {
+                    margin:0.25rem 0;
+                    >* {
+                        margin-right:.5rem;
+                    }
+                }
+                .image {
+                    align-self: center;
+                    width:4rem;
+                    height:4rem;
+                    margin:0.25rem 0;
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+        }
+    }
+}
+
+@keyframes bubble-size {
+    0%, 75% {
+        width:var(--size, 4rem);
+        height:var(--size, 4rem);
+    }
+    100% {
+        width:0rem;
+        height:0rem;
+    }
+}
+@keyframes bubble-move {
+    0% {
+        bottom:-4rem;
+    }
+    100% {
+        bottom:var(--distance, 10rem);
+    }
+}
+
